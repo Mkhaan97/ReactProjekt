@@ -1,10 +1,12 @@
 
 import './App.css';
+import MovieAPI from './components/MovieAPI';
 
 function App() {
   return (
     <div className="App">
-      <h1>Nua projekt belkestäl</h1>
+      <h1>What do you want to watch?</h1>
+      <MovieAPI />
     </div>
   );
 }
