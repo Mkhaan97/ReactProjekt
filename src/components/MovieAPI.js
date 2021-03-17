@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Form from './Form';
+import Movielist from './Movielist';
 
 class MovieAPI extends Component {
 
@@ -10,10 +12,25 @@ class MovieAPI extends Component {
             input: '',
             APIinfo: ''
         }
+
+        // this.state = {
+        //     todos: [
+        //         {posts: [],
+        //         input: '',
+        //         APIinfo: ''
+        //         }
+        //     ]
+        // }
+
     }
 
 
 
+    
+
+
+
+    
     fetchPosts = async (event) => {
         
         const target = event.target;
@@ -49,30 +66,16 @@ class MovieAPI extends Component {
 
         return (
             <div>
+
                 <form>
                     <input type="text" value={this.state.input} name="input" onChange={this.fetchPosts}></input>
                     <button>Search</button>
                 </form>
 
+                {/* <Form/> */}
+            
 
-                <section>
-                    {    
-                        APIinfo === "True" ?
-                            posts.map(post => {
-                                
-                                return (<article key = {post.imdbID}>
-                                
-                                    <h2>{post.Title}</h2>
-                                    <p>{post.Type}</p>
-                                    <p>{post.Year}</p>
-                                    <img src={post.Poster}/>
-                                    
-                                </article>)
-                            })  
-                        : 'No data'
-                    }
-                        
-                </section>
+                <Movielist posts = {this.state.posts} APIinfo= {this.state.APIinfo}/>
 
             </div>
         )
