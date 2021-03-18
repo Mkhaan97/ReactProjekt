@@ -27,6 +27,7 @@ export class Form extends Component {
         });
 
         try {
+            
             let url             = "http://www.omdbapi.com/?apikey=b4b7cffe&s=" + this.state.input;
             console.log(url);
             const response      = await fetch(url);
@@ -38,13 +39,14 @@ export class Form extends Component {
                 APIinfo: data['Response']
             })  
 
-                 const newInfo = {
-                    input: this.state.input,
-                    posts: data['Search'],
-                    APIinfo: data['Response']
-                }
-                
-           
+        const newState = {
+            posts: this.state.posts,
+            input: this.state.input,
+            APIinfo: this.state.APIinfo
+        }
+        
+            this.props.addInfo(newState)
+
         
 
             console.log(this.state.input);
