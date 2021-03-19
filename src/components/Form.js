@@ -63,7 +63,7 @@ export class Form extends Component {
     
     render() {
         return (
-            <form>
+            <form id="form">
                     <input type="text" value={this.state.input} name="input" onChange={this.fetchPosts}></input>
                     <button>Search</button>
             </form>

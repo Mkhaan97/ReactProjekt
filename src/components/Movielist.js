@@ -1,19 +1,22 @@
 import React from 'react'
 import Movie from './Movie'
+import './Styling/formStyle.css';
 
 
 export default function Movielist(props) {
     return (
-        <div>
-            <h2>Search hits</h2>
+        <div id="content-wrapper">
+            {/* <h2 id="search-title">Search hits</h2> */}
 
-            <ul>
+            <ul id="ul-search">
             {
                 props.APIinfo === "True" ?
                 props.posts.map( (post) => (
                     <Movie key={post.imdbID} post={post}/>
                     ))
-                    : 'No hits'
+                    : <p id="error-message">
+                        No hits
+                    </p>
             }
 
             </ul>

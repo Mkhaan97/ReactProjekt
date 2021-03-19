@@ -1,18 +1,24 @@
 import React, { Component } from 'react'
+import './Styling/formStyle.css';
 
 export class Movie extends Component {
     render() {
         const {post} = this.props;
         return (
 
-            <li style={{ listStyleType: "none" }}>
+        <div id="content-wrapper-for-li">
+            <li id = 'movie' style={{ listStyleType: "none" }}>
 
-                 <h2> {post.Title} </h2>
-                 <p style={{textTransform: 'capitalize'}}>Type: {post.Type}</p>
-                 <p>{post.Year}</p>
-                 <img alt ="pic" src={post.Poster}/>
+                <div>
+
+                 <h2 id="movie-title" >{post.Title} </h2>
+                 <p id="movie-type" >Type: {post.Type}</p>
+                 <p id="movie-year" >{post.Year}</p>
+                 <img id="movie-pic" alt ="pic" src={post.Poster}/>
+                </div>
 
             </li>
+        </div>
         )
     }
 }
