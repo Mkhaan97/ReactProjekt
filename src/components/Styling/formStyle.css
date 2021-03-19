@@ -18,13 +18,6 @@
     justify-content: center;
 }
 
-/* #content-wrapper-for-li {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    
-} */
-
 #search-title {
     color:black;
     /* margin-left: 40%; */
@@ -62,13 +55,9 @@ h1{
 
 #movie {
     margin-left:100px;
-    /* margin:0.5rem; */
-    /* display: flex;
-    justify-items: center;
-    align-items: center; */
 }
 
 
 #footer-text {
-    margin-left:40rem;
+    margin-left:43rem;
 }
